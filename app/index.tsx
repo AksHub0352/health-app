@@ -24,9 +24,9 @@ export default function Index() {
   //     </View>
   //   );
   // }
-  // return <RecordsScreen />;
+  return <RecordsScreen />;
   // return <HealthProfile />;
-  return <RewardPage />;
+  // return <RewardPage />;
   // return <HomePage />;
   // return <UploadPage />;
 }

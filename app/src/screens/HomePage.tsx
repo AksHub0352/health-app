@@ -114,7 +114,7 @@ export default function HomePage() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#f8f9fa" },
   scrollView: { flex: 1 },
-  section: { padding: 16 },
+  section: { padding: 16, marginTop: 36 },
   sectionHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
