@@ -8,16 +8,18 @@ import {
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
-import AppointmentCard from "../components/AppointmentCard";
-import DoctorCard from "../components/DoctorCard";
-import CategoryCard from "../components/CategoryCard";
-import DoctorListCard from "../components/DoctorListCard";
-import BottomNav from "../components/BottomNav";
+import AppointmentCard from "../src/components/AppointmentCard";
+import DoctorCard from "../src/components/DoctorCard";
+import CategoryCard from "../src/components/CategoryCard";
+import DoctorListCard from "../src/components/DoctorListCard";
+import BottomNav from "../src/components/BottomNav";
+import Header from "../src/components/Header";
 
 export default function HomePage() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
+      <Header />
       <ScrollView style={styles.scrollView}>
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
@@ -44,19 +46,19 @@ export default function HomePage() {
             <DoctorCard
               name="Dr. Sharad Shetty"
               speciality="Cardiologist"
-              image={require("../../../assets/images/image1.png")}
+              image={require("../../assets/images/image1.png")}
               onPress={() => console.log("Doctor pressed")}
             />
             <DoctorCard
               name="Dr. Anand Gupta"
               speciality="Dermatologist"
-              image={require("../../../assets/images/image1.png")}
+              image={require("../../assets/images/image1.png")}
               onPress={() => console.log("Doctor pressed")}
             />
             <DoctorCard
               name="Dr. Anand Gupta"
               speciality="Dermatologist"
-              image={require("../../../assets/images/image1.png")}
+              image={require("../../assets/images/image1.png")}
               onPress={() => console.log("Doctor pressed")}
             />
           </ScrollView>
@@ -66,17 +68,17 @@ export default function HomePage() {
           <Text style={styles.categoriesTitle}>Categories</Text>
           <View style={styles.categoriesGrid}>
             <CategoryCard
-              icon={require("../../../assets/images/image1.png")}
+              icon={require("../../assets/images/image1.png")}
               label="Dentist"
               onPress={() => console.log("Category pressed")}
             />
             <CategoryCard
-              icon={require("../../../assets/images/image1.png")}
+              icon={require("../../assets/images/image1.png")}
               label="Dermatology"
               onPress={() => console.log("Category pressed")}
             />
             <CategoryCard
-              icon={require("../../../assets/images/image1.png")}
+              icon={require("../../assets/images/image1.png")}
               label="Pediatrics"
               onPress={() => console.log("Category pressed")}
             />
@@ -93,7 +95,7 @@ export default function HomePage() {
           <DoctorListCard
             name="Dr. Aravind Prasad"
             qualifications="Dermatologist | MBBS, DDVL,FAM"
-            image={require("../../../assets/images/image1.png")}
+            image={require("../../assets/images/image1.png")}
             clinic="Aster Prime Clinic"
             location="Ameerpet"
             experience={15}
@@ -106,13 +108,12 @@ export default function HomePage() {
           />
         </View>
       </ScrollView>
-      <BottomNav />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#f8f9fa" },
+  container: { flex: 1, backgroundColor: "#f8f9fa", marginTop: 36 },
   scrollView: { flex: 1 },
   section: { padding: 16, marginTop: 36 },
   sectionHeader: {

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { View, ScrollView, StyleSheet } from "react-native";
-import Header from "../components/Header";
-import FilterButton from "../components/FilterButton";
-import RecordCard from "../components/RecordCard";
-import { RecordCardProps } from "../../types";
+import Header from "../src/components/Header";
+import FilterButton from "../src/components/FilterButton";
+import RecordCard from "../src/components/RecordCard";
+import { RecordCardProps } from "../types";
 
 const RecordsScreen = () => {
   const [selectedDoctor, setSelectedDoctor] = useState<string>("");
@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#f8f9fa",
+    marginTop: 46,
   },
   filterContainer: {
     paddingHorizontal: 16,
